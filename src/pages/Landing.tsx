@@ -1,29 +1,63 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Dumbbell, Target, TrendingUp, Users, Star, CheckCircle } from "lucide-react";
+import { Dumbbell, Target, TrendingUp, Users, Star, CheckCircle, Sparkles } from "lucide-react";
 
 export default function Landing() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+      {/* Header */}
+      <header className="border-b border-white/10 bg-black/20 backdrop-blur-sm">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <h1 className="text-2xl font-bold text-white">RiwiFit</h1>
+          </div>
+          <nav className="hidden md:flex items-center space-x-6">
+            <a href="#features" className="text-white/70 hover:text-white transition-colors">
+              Características
+            </a>
+            <a href="#pricing" className="text-white/70 hover:text-white transition-colors">
+              Precios
+            </a>
+            <a href="#about" className="text-white/70 hover:text-white transition-colors">
+              Nosotros
+            </a>
+          </nav>
+          <div className="flex items-center space-x-4">
+            <Button variant="ghost" className="text-white hover:bg-white/10">
+              Iniciar Sesión
+            </Button>
+            <Button className="bg-white text-black hover:bg-white/90">
+              Registrarse
+            </Button>
+          </div>
+        </div>
+      </header>
+
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="mb-8">
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
-              Bienvenido a <span className="text-primary">RiwiFit</span>
+      <section className="relative overflow-hidden py-32 px-4">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(139,69,255,0.1)_0%,transparent_70%)]"></div>
+        <div className="max-w-4xl mx-auto text-center relative">
+          <div className="mb-6">
+            <div className="inline-flex items-center px-4 py-2 bg-white/10 rounded-full text-sm mb-8 backdrop-blur-sm border border-white/20">
+              <Sparkles className="w-4 h-4 mr-2" />
+              RiwiFit está en versión beta
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+              Tu Compañero de Fitness
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Tu compañero perfecto para alcanzar tus objetivos de fitness. 
-              Entrena, come bien y transforma tu vida.
+            <p className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+              La plataforma completa para transformar tu estilo de vida. Entrena inteligente, 
+              come mejor y alcanza tus objetivos de fitness.
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="text-lg px-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <Button size="lg" className="text-lg px-8 bg-white text-black hover:bg-white/90">
               Comenzar Gratis
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8">
-              Iniciar Sesión
+            <Button variant="ghost" size="lg" className="text-lg px-8 text-white border border-white/20 hover:bg-white/10">
+              <Sparkles className="w-4 h-4 mr-2" />
+              Ver Demo
             </Button>
           </div>
 
